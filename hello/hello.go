@@ -9,6 +9,7 @@ const (
 	greetingSP = "Hola, "
 )
 
+// Hello says hello for you
 func Hello(s, lan string) string {
 	if s == "" {
 		s = "i0Ek3"
