@@ -15,6 +15,12 @@ This repo contains some test code write by myself, and source code from repo: `h
 - example function cannot excute if you forget the comment `// Output: result`
 - write the good comment for all you functions please, especially exported ones
 
+## Content
+
+- hello
+- integer
+- iteration
+
 
 ## Credit
 
