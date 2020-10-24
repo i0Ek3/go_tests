@@ -9,17 +9,21 @@ This repo contains some test code write by myself, and source code from repo: `h
 - platform: go1.15.2 darwin/amd64
 - run common test: `go test -v`
 - run benchmark test: `go test -bench=.`
+- use `go test -cover` to gets the test cover ratio
 - test file named as xxx_test.go
 - test function named as TestXxx and it only recive one arugment
 - write the simple test and test it first, then write the main code and refactor them, REPL
 - example function cannot excute if you forget the comment `// Output: result`
 - write the good comment for all you functions please, especially exported ones
+-
 
 ## Content
 
 - hello
 - integer
 - iteration
+- array
+- slice
 
 
 ## Credit
