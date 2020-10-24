@@ -1,6 +1,6 @@
 # Learning Go with TDD
 
-This repo contains some test code write by myself, and source code from repo: `https://github.com/quii/learn-go-with-tests`, of course I expand it properly, and fully test. Whatever you learn it for work or something else, it's really worth it, have fun.
+In this repo, each directory contains the corresponding topic test file and source code, related topics come from repo: `https://github.com/quii/learn-go-with-tests`. And I expanded it properly and rewrited some code with fully tested. Whatever you learn it for work or something else, it's really worth it, let's Go.
 
 ## YSK
 
@@ -15,8 +15,10 @@ This repo contains some test code write by myself, and source code from repo: `h
 - write the simple test and test it first, then write the main code and refactor them, REPL
 - example function cannot excute if you forget the comment `// Output: result`
 - write the good comment for all you functions please, especially exported ones
--
+- use table driven tests to make test file easier to expand and maintain
+- use `[]struct{}{}` 
 
+ 
 ## Content
 
 - hello
@@ -24,11 +26,12 @@ This repo contains some test code write by myself, and source code from repo: `h
 - iteration
 - array
 - slice
+- smi: struct/method/interface
 
 
 ## Credit
 
-- [https://github.com/quii/learn-go-with-tests](https://github.com/quii/learn-go-with-tests)
+Thanks to [@quii](https://github.com/quii) for his contribution.
 
 ## License
 
