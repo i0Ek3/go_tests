@@ -16,9 +16,12 @@ In this repo, each directory contains the corresponding topic test file and sour
 - example function cannot excute if you forget the comment `// Output: result`
 - write the good comment for all you functions please, especially exported ones
 - use table driven tests to make test file easier to expand and maintain
-- use `[]struct{}{}` 
-
+- use `[]struct{}{}` to make your code hierarchical and maintain better
+- when a function or method was invocated, parameters will be copied. So, always use `*Struct` be a reciver 
+- type alias can be useful, also you can declare methods on them: `type Transaction uintptr`
+- import `errors`, cause of error checking always useful, and read [this one](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)
  
+
 ## Content
 
 - hello
@@ -27,7 +30,9 @@ In this repo, each directory contains the corresponding topic test file and sour
 - array
 - slice
 - smi: struct/method/interface
-
+- pe: pointer/error
+- maps: map
+ 
 
 ## Credit
 
