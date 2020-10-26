@@ -20,7 +20,9 @@ In this repo, each directory contains the corresponding topic test file and sour
 - when a function or method was invocated, parameters will be copied. So, always use `*Struct` be a reciver 
 - type alias can be useful, also you can declare methods on them: `type Transaction uintptr`
 - import `errors`, cause of error checking always useful, and read [this one](https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully)
- 
+- use `_, ok` to check if operation is ok, ok is a bool value
+- never initialize an empty map variable like `var m map[int]string`, cause of nil pointer exception. You should do this: `m = make(map[int]string)` or `m = map[int]string{}`
+
 
 ## Content
 
