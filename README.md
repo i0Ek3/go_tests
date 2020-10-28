@@ -25,6 +25,9 @@ In this repo, each directory contains the corresponding topic test file and sour
 - if you want to put the data somewhere, please use `io.Writer`, it is a good general interface, better than `bytes.Buffer`
 - DI makes separation of concerns: decoupling where the data arrives and how it is generated, and reuse the code in the different situation
 - try to get your code to be tested as soon as possible
+- when we want to start a goroutine, we often use anonymous functions, just like this: `go func() {}()`
+- to enable race detector, run the test with the race flag: `go test -race` 
+- use channel to pass the data in goroutine, `ch <- data` is send data and `data := <-ch` is receive data
 
 
 ## Content
@@ -39,6 +42,7 @@ In this repo, each directory contains the corresponding topic test file and sour
 - maps: map
 - **di: dependency injection**
 - **mock: mocking**
+- **concurrency: goroutine, channel**
  
 
 ## Credit
