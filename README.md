@@ -28,6 +28,9 @@ In this repo, each directory contains the corresponding topic test file and sour
 - when we want to start a goroutine, we often use anonymous functions, just like this: `go func() {}()`
 - to enable race detector, run the test with the race flag: `go test -race` 
 - use channel to pass the data in goroutine, `ch <- data` is send data and `data := <-ch` is receive data
+- use `net/http/httptest` to create a mock http server
+- use `select` to implement process synchronization
+- use `time.After()` to prevent your system from being permanently blocked
 
 
 ## Content
@@ -43,6 +46,7 @@ In this repo, each directory contains the corresponding topic test file and sour
 - **di: dependency injection**
 - **mock: mocking**
 - **concurrency: goroutine, channel**
+- select
  
 
 ## Credit
