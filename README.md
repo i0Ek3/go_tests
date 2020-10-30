@@ -9,9 +9,10 @@ In this repo, each directory contains the corresponding topic test file and sour
 - platform: go1.15.2 darwin/amd64
 - run common test: `go test -v`
 - run benchmark test: `go test -bench=.`
-- use `go test -cover` to gets the test cover ratio
+- use `go test -cover` to get the test cover ratio
 - test file named as xxx_test.go
 - test function named as TestXxx and it only recive one arugment
+- don't expect to write perfect code at once, please iterate slowly
 - write the simple test and test it first, then write the main code and refactor them, REPL
 - example function cannot excute if you forget the comment `// Output: result`
 - write the good comment for all you functions please, especially exported ones
@@ -31,6 +32,10 @@ In this repo, each directory contains the corresponding topic test file and sour
 - use `net/http/httptest` to create a mock http server
 - use `select` to implement process synchronization
 - use `time.After()` to prevent your system from being permanently blocked
+- don't use reflection unless you really need it
+- nobody likes anonymous nested stuct in the complicated code, so please be nice
+- pointer type value cannot use the NumField method in reflect, you need to call Elem() to extract the underlying value before executing this method
+- slice have no method NumField in reflect, we should use method Len and Index 
 
 
 ## Content
@@ -43,10 +48,11 @@ In this repo, each directory contains the corresponding topic test file and sour
 - smi: struct/method/interface
 - pe: pointer/error
 - maps: map
-- **di: dependency injection**
-- **mock: mocking**
-- **concurrency: goroutine, channel**
+- di: dependency injection
+- mock: mocking
+- concurrency
 - select
+- reflect // a little hard
  
 
 ## Credit
