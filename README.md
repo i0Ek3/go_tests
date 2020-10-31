@@ -36,6 +36,15 @@ In this repo, each directory contains the corresponding topic test file and sour
 - nobody likes anonymous nested stuct in the complicated code, so please be nice
 - pointer type value cannot use the NumField method in reflect, you need to call Elem() to extract the underlying value before executing this method
 - slice have no method NumField in reflect, we should use method Len and Index 
+- use `sync.WaitGroup` to synchronize concurrent processes
+- use `sync.Mutex` to solve data race issue, and the zero value for a Mutex is an unlocked mutex
+- a Mutex must not be copied after first use
+- `Use a sync.Mutex or a channel?` see [here](https://github.com/golang/go/wiki/MutexOrChannel)
+    - use channels when passing ownership of data 
+    - use mutexes for managing state
+    - in my ex-company, they use both Mutex and channel, and they use channel to customize a new Mutex
+- use `go vet` to check your code always
+- don't use type embedding, you'll ignore the impact it brings, and that's hard to track bug down
 
 
 ## Content
@@ -53,6 +62,7 @@ In this repo, each directory contains the corresponding topic test file and sour
 - concurrency
 - select
 - reflect // a little hard
+- sync
  
 
 ## Credit
