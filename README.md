@@ -1,6 +1,6 @@
 # Learning Go with TDD
 
-In this repo, each directory contains the corresponding topic test file and source code, related topics come from repo: `https://github.com/quii/learn-go-with-tests`. And I expanded it properly and rewrited some code with fully tested. Whatever you learn it for work or something else, it's really worth it, let's Go.
+In this repo, you will see some examples of Go basic syntax, and each directory contains the corresponding topic test file and source code, related topics come from repo [here](https://github.com/quii/learn-go-with-tests). And I expanded it properly and rewrited some code with fully tested. Whatever you learn it for work or something else, it's really worth it, let's Go.
 
 ## YSK
 
@@ -45,6 +45,8 @@ In this repo, each directory contains the corresponding topic test file and sour
     - in my ex-company, they use both Mutex and channel, and they use channel to customize a new Mutex
 - use `go vet` to check your code always
 - don't use type embedding, you'll ignore the impact it brings, and that's hard to track bug down
+- use `context` to manage long-running processes
+- don't use `context.Value` or you got fired, here's [why](https://faiface.github.io/post/context-should-go-away-go2/)
 
 
 ## Content
@@ -63,7 +65,14 @@ In this repo, each directory contains the corresponding topic test file and sour
 - select
 - reflect // a little hard
 - sync
- 
+- context // a little hard
+
+
+## TODO
+
+- error checking
+- refactor 
+
 
 ## Credit
 
