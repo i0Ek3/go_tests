@@ -22,7 +22,6 @@ func Server(store Store) http.HandlerFunc {
 			//log.Print("== met err ----> ", err)
 			return
 		}
-
 		fmt.Fprint(w, data)
 	}
 }
