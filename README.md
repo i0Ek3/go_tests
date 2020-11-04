@@ -47,6 +47,7 @@ In this repo, you will see some examples of Go basic syntax, and each directory 
 - don't use type embedding, you'll ignore the impact it brings, and that's hard to track bug down
 - use `context` to manage long-running processes
 - don't use `context.Value` or you got fired, here's [why](https://faiface.github.io/post/context-should-go-away-go2/)
+- use `strings.Builder` to build a string with less memory copy
 
 
 ## Content
@@ -66,6 +67,7 @@ In this repo, you will see some examples of Go basic syntax, and each directory 
 - reflect // a little hard
 - sync
 - context // a little hard
+- RNR: A test based on property
 
 
 ## TODO
