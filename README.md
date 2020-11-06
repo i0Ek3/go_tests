@@ -48,6 +48,7 @@ In this repo, you will see some examples of Go basic syntax, and each directory 
 - use `context` to manage long-running processes
 - don't use `context.Value` or you got fired, here's [why](https://faiface.github.io/post/context-should-go-away-go2/)
 - use `strings.Builder` to build a string with less memory copy
+- use `testing/quick` to test the code with random numbers quickly
 
 
 ## Content
@@ -67,7 +68,7 @@ In this repo, you will see some examples of Go basic syntax, and each directory 
 - reflect // a little hard
 - sync
 - context // a little hard
-- RNR: A test based on property
+- rnr: A test based on property // a little hard
 
 
 ## TODO

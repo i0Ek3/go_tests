@@ -1,12 +1,13 @@
-package main
+package rnr
 
 import (
 	"fmt"
 	"testing"
+	"testing/quick"
 )
 
 var cases = []struct {
-	Number int
+	Number uint16
 	Roman  string
 }{
 	{Number: 1, Roman: "I"},
@@ -56,7 +57,7 @@ func assertRN(t *testing.T, got, want string) {
 }
 
 func TestNR(t *testing.T) {
-	for _, test := range cases[:3] {
+	for _, test := range cases {
 		t.Run(fmt.Sprintf("%q --> %d", test.Roman, test.Number), func(t *testing.T) {
 			got := NR(test.Roman)
 			assertNR(t, got, test.Number)
@@ -65,8 +66,26 @@ func TestNR(t *testing.T) {
 	}
 }
 
-func assertNR(t *testing.T, got, want int) {
+func assertNR(t *testing.T, got, want uint16) {
 	if got != want {
-		t.Errorf("got %q but we want %q", got, want)
+		t.Errorf("got %d but we want %d", got, want)
+	}
+}
+
+func TestProperties(t *testing.T) {
+	assertion := func(number uint16) bool {
+		if number > 3999 {
+			return true
+		}
+		t.Log("testing", number)
+		roman := RN(number)
+		value := NR(roman)
+		return value == number
+	}
+
+	if err := quick.Check(assertion, &quick.Config{
+		MaxCount: 1000,
+	}); err != nil {
+		t.Error("failed checks", err)
 	}
 }
