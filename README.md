@@ -2,6 +2,28 @@
 
 In this repo, you will see some examples of Go basic syntax, and each directory contains the corresponding topic test file and source code, related topics come from repo [here](https://github.com/quii/learn-go-with-tests). And I expanded it properly and rewrited some code with fully tested. Whatever you learn it for work or something else, it's really worth it, let's Go.
 
+
+## Content
+
+- hello
+- integer
+- iteration
+- array
+- slice
+- smi: struct/method/interface
+- pe: pointer/error
+- maps: map
+- di: dependency injection
+- mock: mocking
+- concurrency
+- select
+- reflect // a little hard
+- sync
+- context // a little hard
+- rnr: A test based on property // a little hard
+- math
+
+
 ## YSK
 
 > YSK: You Should Know.
@@ -51,26 +73,6 @@ In this repo, you will see some examples of Go basic syntax, and each directory 
 - use `testing/quick` to test the code with random numbers quickly
 
 
-## Content
-
-- hello
-- integer
-- iteration
-- array
-- slice
-- smi: struct/method/interface
-- pe: pointer/error
-- maps: map
-- di: dependency injection
-- mock: mocking
-- concurrency
-- select
-- reflect // a little hard
-- sync
-- context // a little hard
-- rnr: A test based on property // a little hard
-
-
 ## TODO
 
 - error checking
@@ -80,6 +82,7 @@ In this repo, you will see some examples of Go basic syntax, and each directory 
 ## Credit
 
 Thanks to [@quii](https://github.com/quii) for his contribution. And also I found a good Go tutorial to make you learn Go better, please visit [here](https://golangbot.com/learn-golang-series/) to check it out.
+
 
 ## License
 
